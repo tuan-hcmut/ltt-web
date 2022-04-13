@@ -1,0 +1,27 @@
+.nav {
+  &__icons {
+    list-style: none;
+    display: flex;
+    gap: 2.4rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      font-size: 1.6rem;
+      color: $color-grey-dark;
+      transition: all 0.2s;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-hover;
+    }
+  }
+
+  &__icon {
+    height: 2.4rem;
+    width: 2.4rem;
+  }
+}
