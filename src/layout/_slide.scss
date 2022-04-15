@@ -1,0 +1,30 @@
+.slider-containner {
+  width: 100%;
+  height: 60rem;
+  // background-color: antiquewhite;
+}
+
+.slides {
+  height: 100%;
+  // display: flex;
+}
+
+.slide {
+  height: 100%;
+  & > div {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  &__img1 {
+    background-image: url("./../../public/one-peace.jpg");
+  }
+
+  &__img2 {
+    background-image: url("./../../public/caro.jpg");
+  }
+
+  &__img3 {
+    background-image: url("./../../public/chess.jpg");
+  }
+}

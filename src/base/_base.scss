@@ -15,6 +15,11 @@
   box-sizing: inherit;
 }
 
+*:focus {
+  outline: none;
+  // outline: 1px $color-border-grey;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -22,8 +27,8 @@ html {
 body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1;
   color: $color-grey-dark;
-  background-color: $color-grey-light;
+  // background-color: $color-grey-light;
   box-sizing: border-box;
 }
