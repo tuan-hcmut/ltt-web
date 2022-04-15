@@ -9,10 +9,11 @@
 @import "./base/utilities";
 
 ///// components////
-
+@import "./layout/button";
 @import "./layout/footer";
 @import "./layout/grid";
 @import "./layout/header";
 @import "./layout/navigation";
+@import "./layout/slide";
 
 @import "./pages/home/home";

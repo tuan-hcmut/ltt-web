@@ -1,15 +1,25 @@
 import React from "react";
-import { TopMenu } from "./nav";
+import { TopMenu, MainMenu } from "./nav";
 
 function Header() {
   return (
-    <div className="menu-top-header">
-      <div className="containner">
-        <div className="menu-top">
-          <TopMenu />
+    <React.Fragment>
+      <div className="menu-top-header">
+        <div className="containner">
+          <div className="menu-top">
+            <TopMenu />
+          </div>
         </div>
       </div>
-    </div>
+
+      <div className="main-header">
+        <div className="containner">
+          <div className="main-menu">
+            <MainMenu />
+          </div>
+        </div>
+      </div>
+    </React.Fragment>
   );
 }
 

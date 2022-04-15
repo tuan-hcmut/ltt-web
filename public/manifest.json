@@ -13,9 +13,21 @@
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "logo1.png",
       "type": "image/png",
       "sizes": "512x512"
+    },
+    {
+      "src": "one-peace.jpg",
+      "type": "image/jpg"
+    },
+    {
+      "src": "caro.jpg",
+      "type": "image/jpg"
+    },
+    {
+      "src": "chess.jpg",
+      "type": "image/jpg"
     }
   ],
   "start_url": ".",
