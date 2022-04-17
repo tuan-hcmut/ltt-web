@@ -180,7 +180,7 @@ function MainMenu() {
               <input
                 type={"search"}
                 aria-label={"Search"}
-                value=""
+                defaultValue=""
                 placeholder={"Type..."}
                 className="nav__search-bar"
               />
