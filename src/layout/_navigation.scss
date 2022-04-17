@@ -124,8 +124,9 @@
     padding: 1rem 1rem;
     border-radius: 5px;
     border: 1px solid $color-border-grey;
-    background-color: transparent;
+    background-color: #fff;
     transition: all 0.3s;
+    z-index: 1000;
     & > ul {
       list-style: none;
       line-height: 1.2;
