@@ -1,65 +1,79 @@
 .slider-containner {
-  height: 60rem;
-  overflow: hidden;
+  height: 62rem;
   position: relative;
-  // background-color: antiquewhite;
+  overflow: hidden;
 }
 
 .slides {
+  width: 300%;
   height: 100%;
   display: flex;
-  & input {
-    display: none;
-  }
-}
-
-.slide {
-  transition: 2s;
-  & > img {
-    display: block;
-    height: 60rem;
-    // width: 170rem;
-    // opacity: 0.7;
-    margin: auto;
+  &:hover .slide__bg-img {
     filter: brightness(0.8);
   }
 }
 
-.slide-manual {
+.slide {
+  &__containner {
+    position: relative;
+    transition: all 1.5s;
+    // &:hover .slide__bg-img {
+    //   filter: brightness(0.8);
+    // }
+  }
+
+  &__bg-img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 1s ease;
+  }
+}
+
+.dots {
   display: flex;
   position: absolute;
   left: 50%;
   top: 100%;
-  transform: translate(-50%, -200%);
-  & .manual-btn {
-    border: 2px solid $color-hover;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
+  transform: translate(-50%, -150%);
+  z-index: 100;
+}
 
-    &:not(:last-child) {
-      margin-right: 3rem;
-    }
-    &:hover,
-    &:active {
-      background-color: $color-hover;
-    }
+.dot {
+  border: 2px solid $color-hover;
+  padding: 6px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+  &:not(:last-child) {
+    margin-right: 1.2rem;
+  }
+
+  &:hover {
+    background-color: $color-hover;
   }
 }
 
-#radio1:checked ~ .first {
-  margin-left: 0;
-}
-
-#radio2:checked ~ .first {
-  margin-left: -100%;
-}
-
-#radio3:checked ~ .first {
-  margin-left: -200%;
-}
-
-#radio4:checked ~ .first {
-  margin-left: -300%;
+.category {
+  display: inline-block;
+  line-height: 1.6;
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding: 0.4rem 1.2rem;
+  border-radius: 100px;
+  background-color: $color-grey-dark;
+  & > a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    color: $color-white;
+    transition: all 0.2s;
+    & > ion-icon {
+      padding-bottom: 2px;
+    }
+    &:hover {
+      color: $color-hover;
+    }
+  }
 }
