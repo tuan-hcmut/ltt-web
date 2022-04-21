@@ -108,7 +108,7 @@ function MainMenu() {
           <li>
             <div className="nav__cascading-title">
               <a className="nav__link" href="/">
-                Commics
+                Movies
                 <ion-icon name="chevron-down-outline"></ion-icon>
               </a>
 
