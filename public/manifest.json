@@ -28,6 +28,38 @@
     {
       "src": "chess.jpg",
       "type": "image/jpg"
+    },
+    {
+      "src": "venom.jpg",
+      "type": "image/jpg"
+    },
+    {
+      "src": "wall-e.jpg",
+      "type": "image/jpg"
+    },
+    {
+      "src": "gravity.jpg",
+      "type": "image/jpg"
+    },
+    {
+      "src": "logan.jpg",
+      "type": "image/jpg"
+    },
+    {
+      "src": "Big-Hero-6.jpg",
+      "type": "image/jpg"
+    },
+    {
+      "src": "the-jungle.jpg",
+      "type": "image/jpg"
+    },
+    {
+      "src": "fast-furious.jpg",
+      "type": "image/jpg"
+    },
+    {
+      "src": "marvel.jpg",
+      "type": "image/jpg"
     }
   ],
   "start_url": ".",

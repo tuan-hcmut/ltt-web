@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+// import axios from "axios";
 
 const backGroundImg = ["one-peace.jpg", "one-punch-man.jpg", "chess.jpg"];
 const nameCommics = ["One Peace", "One Punch Man", "Chess"];
@@ -34,11 +35,11 @@ const release = [
   "Not Found",
 ];
 
-console.log(1);
 function SlideShow() {
   const [reSize, setReSize] = useState(window.innerWidth);
   const [fillDot, setFillDot] = useState(0);
   useEffect(() => {
+    //// auto slide /////
     const autoSlide = setInterval(() => {
       setFillDot((pre) => {
         if (pre === 2) return 0;
@@ -52,6 +53,16 @@ function SlideShow() {
 
     window.addEventListener("resize", handleScroll);
 
+    ///// get movies /////
+    // async function getMove() {
+    //   try {
+    //     const movies = await axios.get("https://ophim1.com/phim/one-peace");
+    //     console.log(movies);
+    //   } catch (e) {
+    //     alert(e);
+    //   }
+    // }
+    // getMove();
     return () => {
       window.removeEventListener("resize", handleScroll);
       clearInterval(autoSlide);
@@ -59,7 +70,7 @@ function SlideShow() {
   }, []);
 
   return (
-    <div className="slider-containner">
+    <div className="slider-containner u-margin-bottom-medium">
       <div className="slides">
         <div className="dots">
           {[0, 1, 2].map((dot) => (
@@ -85,7 +96,6 @@ function SlideShow() {
               className="slide__bg-img"
               style={{
                 backgroundImage: `linear-gradient(rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.4)) , url(${img})`,
-                height: 620,
                 width: reSize,
               }}
             ></div>
@@ -96,7 +106,7 @@ function SlideShow() {
                     <div className="category">
                       <a href="#">
                         <ion-icon name="list-circle-outline"></ion-icon>
-                        Commics
+                        Anime
                       </a>
                     </div>
                     <h1 className="u-margin-bottom-small">

@@ -1,0 +1,6 @@
+@mixin preBgImg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 1s ease;
+}

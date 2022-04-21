@@ -6,14 +6,40 @@
 - Spacing system (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 */
-.heading-primary {
-  font-size: 2.2rem;
-  line-height: 1.2;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-  color: $color-white;
-}
+.heading {
+  &-primary {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: $color-grey;
+  }
 
+  &-secondary {
+    font-size: 1.8rem;
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    // color: $color-white;
+  }
+
+  &-third {
+    font-size: 1.6rem;
+    line-height: 1.1;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    // letter-spacing: -0.5px;
+    color: $color-grey;
+  }
+
+  &-fourth {
+    font-size: 1.6rem;
+    line-height: 1.1;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: $color-grey;
+  }
+}
 .description {
   font-weight: 500;
   font-size: 1.8rem;
@@ -34,7 +60,7 @@
     }
 
     .author & .nav__link {
-      color: $color-white;
+      color: $color-grey;
       &:hover {
         color: $color-hover;
       }
