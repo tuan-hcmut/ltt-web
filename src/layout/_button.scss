@@ -2,10 +2,10 @@
   &,
   &:link,
   &:visited {
-    text-transform: uppercase;
+    // text-transform: uppercase;
     text-decoration: none;
     display: inline-block;
-    border-radius: 10rem;
+    // border-radius: 10rem;
     transition: all 0.2s;
     position: relative;
 
@@ -39,6 +39,43 @@
         background-color: $color-grey-dark;
         color: $color-hover;
       }
+    }
+  }
+
+  &-loading {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+    & > span {
+      padding: 1.3rem 3rem;
+      border-radius: 3px;
+      display: inline-block;
+      font-size: 1.4rem;
+      letter-spacing: 0;
+      line-height: 1.4;
+      font-weight: 600;
+      background-color: $color-hover;
+      color: $color-white;
+      &:link,
+      &:visited {
+        text-decoration: none;
+        transition: all 0.3s;
+      }
+
+      &:hover,
+      &:active {
+        background-color: $color-grey-dark;
+      }
+    }
+  }
+  &-play {
+    padding: 1.3rem 2.8rem;
+    background-color: transparent;
+    border: 1px solid $color-hover;
+    border-radius: 5px;
+    &:hover,
+    &:active {
+      background-color: $color-hover;
     }
   }
 }
