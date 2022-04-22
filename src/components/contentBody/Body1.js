@@ -12,7 +12,7 @@ const viewCount = ["354556", "687398", "684412", "648871", "374366"];
 
 function Boby1() {
   return (
-    <div className="content-new-update u-margin-bottom-medium">
+    <div className="content-new-update u-margin-bottom-big">
       <div className="containner">
         <div className="content-new-update-inner u-flex-gap-big">
           <div className="content-new-update__img-wrapper">
@@ -46,8 +46,11 @@ function Boby1() {
             </div>
             <div className="content-new-update__main-content">
               {titles.map((title, index) => (
-                <div className="content-new-update__main-content-sub">
-                  <div className="heading-fourth" key={index}>
+                <div
+                  className="content-new-update__main-content-sub"
+                  key={index}
+                >
+                  <div className="heading-fourth">
                     <a href="/" className="nav__link">
                       {title}
                     </a>
