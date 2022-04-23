@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { Link } from "react-scroll";
 function TopMenu() {
   return (
     <React.Fragment>
@@ -101,16 +101,30 @@ function MainMenu() {
       <div className="nav__main-header-left">
         <ul className="nav__list">
           <li>
-            <a className="nav__link" href="/">
+            <Link
+              to="top-menu"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+              className="nav__link"
+            >
               Home
-            </a>
+            </Link>
           </li>
           <li>
             <div className="nav__cascading-title">
-              <a className="nav__link" href="/">
+              <Link
+                to="movies"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+                className="nav__link"
+              >
                 Movies
                 <ion-icon name="chevron-down-outline"></ion-icon>
-              </a>
+              </Link>
 
               <div className="nav__cascading-wrapper">
                 <ul>
@@ -132,10 +146,17 @@ function MainMenu() {
 
           <li>
             <div className="nav__cascading-title">
-              <a className="nav__link" href="/">
+              <Link
+                to="game"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+                className="nav__link"
+              >
                 Game
                 <ion-icon name="chevron-down-outline"></ion-icon>
-              </a>
+              </Link>
 
               <div className="nav__cascading-wrapper">
                 <ul>
@@ -156,9 +177,16 @@ function MainMenu() {
           </li>
 
           <li>
-            <a className="nav__link" href="/">
+            <Link
+              to="top-menu"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+              className="nav__link"
+            >
               About Me
-            </a>
+            </Link>
           </li>
         </ul>
 
