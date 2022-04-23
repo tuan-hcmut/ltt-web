@@ -24,7 +24,7 @@ const imgUrl = [
 
 function Body2() {
   return (
-    <div className="content-movies u-margin-bottom-big">
+    <div className="content-movies u-margin-bottom-big" id="movies">
       <div className="containner">
         <div className="content-movies-heading heading-secondary">
           <h2>Movies</h2>

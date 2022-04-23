@@ -12,7 +12,7 @@ function Body4() {
   const [Loading, setLoading] = useState(true);
 
   return (
-    <div className="content-games u-margin-bottom-big">
+    <div className="content-games u-margin-bottom-big" id="game">
       <div className="containner">
         <div className="content-games-heading heading-secondary">
           <h2>Game</h2>
