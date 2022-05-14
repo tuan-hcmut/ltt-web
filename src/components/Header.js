@@ -26,7 +26,12 @@ function Header() {
         </div>
       </div>
 
-      <div className="main-header" style={{ position: Header ? "fixed" : "" }}>
+      <div
+        className="main-header"
+        style={{
+          position: Header ? "fixed" : "",
+        }}
+      >
         <div className="containner">
           <div className="main-menu">
             <MainMenu />

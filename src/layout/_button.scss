@@ -5,6 +5,7 @@
     // text-transform: uppercase;
     text-decoration: none;
     display: inline-block;
+    font-family: inherit;
     // border-radius: 10rem;
     transition: all 0.2s;
     position: relative;
@@ -71,11 +72,44 @@
   &-play {
     padding: 1.3rem 2.8rem;
     background-color: transparent;
-    border: 1px solid $color-hover;
+    border: 1px solid $color-hover !important;
     border-radius: 5px;
+    color: inherit;
     &:hover,
     &:active {
       background-color: $color-hover;
+    }
+  }
+
+  &-login {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    & .btn {
+      color: white;
+      font-size: 1.4rem;
+      letter-spacing: 0;
+      line-height: 1.4;
+      font-weight: 600;
+      border-radius: 3px;
+      padding: 1.2rem 2.6rem;
+      background-color: $color-hover;
+
+      &:hover,
+      &:active {
+        background-color: $color-grey-dark;
+      }
+    }
+
+    & > a {
+      &:link,
+      &:active,
+      &:visited {
+        font-family: inherit;
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: $color-hover;
+      }
     }
   }
 }
