@@ -1,0 +1,14 @@
+.data__list {
+  list-style: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  & li {
+    padding: 1rem 0;
+  }
+
+  & h3 {
+    color: $color-hover;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}

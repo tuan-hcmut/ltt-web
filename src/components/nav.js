@@ -1,6 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-scroll";
+import { Link as LinkRouter } from "react-router-dom";
+import AuthContext from "./../context/authProvider";
+
 function TopMenu() {
+  const { auth, logout } = useContext(AuthContext);
+  const [userMode, setUserMode] = useState(false);
+
+  const handleLogout = async () => {
+    const res = await logout();
+    return (window.location.href = "/");
+  };
   return (
     <React.Fragment>
       <ul className="nav__list flex-align-center u-padding-right-medium">
@@ -64,25 +74,68 @@ function TopMenu() {
           </li>
         </ul>
 
-        <ul className="nav__list">
-          <li>
-            <a
-              className="nav__link"
-              href="https://www.facebook.com/lethanh.tuan.754703"
-            >
-              Login
-            </a>
-          </li>
+        {auth.data === undefined ? (
+          <ul className="nav__list">
+            <li>
+              <LinkRouter className="nav__link" to={"/login"}>
+                Login
+              </LinkRouter>
+            </li>
 
-          <li>
-            <a
-              className="nav__link"
-              href="https://www.facebook.com/lethanh.tuan.754703"
+            <li>
+              <LinkRouter className="nav__link" to={"signup"}>
+                Register
+              </LinkRouter>
+            </li>
+          </ul>
+        ) : (
+          <ul className="nav__list u-flex-gap-super-small">
+            <li>
+              {/* <div className="setting-mode">
+                <ion-icon name="settings-outline"></ion-icon>
+              </div> */}
+            </li>
+            <li>
+              <LinkRouter className="nav__link" to={"/user/information"}>
+                Hello, {auth.data.name}
+              </LinkRouter>
+            </li>
+            <li
+              className="user-mode"
+              onClick={() => {
+                setUserMode(!userMode);
+              }}
             >
-              Register
-            </a>
-          </li>
-        </ul>
+              <img
+                src={
+                  auth.data?.photo &&
+                  `http://127.0.0.1:5000/img/users/${auth.data.photo}`
+                }
+                alt=""
+              />
+              <ul
+                className="user-mode__list"
+                style={{ display: userMode ? "block" : "none" }}
+              >
+                <li>
+                  <LinkRouter className="nav__link" to={"/user/information"}>
+                    <ion-icon name="person-circle-outline"></ion-icon>
+                    Information
+                  </LinkRouter>
+                </li>
+                <li>
+                  <LinkRouter
+                    className="nav__link"
+                    to={"/logout"}
+                    onClick={handleLogout}
+                  >
+                    <ion-icon name="log-out-outline"></ion-icon> Log Out
+                  </LinkRouter>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        )}
       </nav>
     </React.Fragment>
   );
@@ -94,7 +147,11 @@ function MainMenu() {
     <React.Fragment>
       <div className="u-padding-right-big">
         <a href="/">
-          <img className="nav__logo " alt="logo" src="logo192.png" />
+          <img
+            className="nav__logo "
+            alt="logo"
+            src="http://127.0.0.1:5000/img/cat.png"
+          />
         </a>
       </div>
 
@@ -167,9 +224,9 @@ function MainMenu() {
                   </li>
 
                   <li>
-                    <a href="#" className="nav__link">
+                    <LinkRouter to={"game/caro"} className="nav__link">
                       Caro
-                    </a>
+                    </LinkRouter>
                   </li>
                 </ul>
               </div>

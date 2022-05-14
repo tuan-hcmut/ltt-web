@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link as LinkRouter } from "react-router-dom";
 
 const titles = ["Chess", "Caro", "Sudoku"];
 const imgUrl = ["chess.jpg", "caro.jpg", "sudoku.jpg"];
@@ -66,7 +67,12 @@ function Body4() {
                           341
                         </div>
                       </div>
-                      <div className="btn btn-play">Play Now</div>
+                      <LinkRouter
+                        className="btn btn-play"
+                        to={title === "Caro" ? "game/caro" : "/"}
+                      >
+                        Play Now
+                      </LinkRouter>
                     </div>
                   </div>
                 </div>

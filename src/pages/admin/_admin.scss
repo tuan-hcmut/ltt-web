@@ -1,0 +1,12 @@
+.user-manager {
+  &__content {
+    display: none;
+  }
+  &__options {
+    display: none;
+    margin: 1rem;
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}

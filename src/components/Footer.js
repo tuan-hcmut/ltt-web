@@ -1,21 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-scroll";
-
+import GeneralContext from "./../context/generalProvider";
 function Footer() {
-  const [Scroll, setScroll] = useState(false);
-
-  useEffect(() => {
-    const scrollToTop = () => {
-      setScroll(window.scrollY > 600);
-    };
-
-    window.addEventListener("scroll", scrollToTop);
-
-    return () => {
-      window.removeEventListener("scroll", scrollToTop);
-    };
-  }, []);
-
+  const { Scroll } = useContext(GeneralContext);
   return (
     <React.Fragment>
       <div className="footer">
@@ -23,7 +10,11 @@ function Footer() {
           <div className="footer-wrapper">
             <div className="footer-wrapper__logo">
               <div className="logo">
-                <img className="nav__logo " alt="logo" src="logo192.png" />
+                <img
+                  className="nav__logo "
+                  alt="logo"
+                  src="http://127.0.0.1:5000/img/cat.png"
+                />
               </div>
               <p>
                 LTT is an online platform that using for entertainment purposes.

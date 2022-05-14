@@ -14,6 +14,18 @@
   padding-right: 4.8rem !important;
 }
 
+.u-margin-right-small {
+  margin-right: 2rem !important;
+}
+
+.u-margin-right-medium {
+  margin-right: 3.5rem !important;
+}
+
+.u-margin-right-big {
+  margin-right: 4.8rem !important;
+}
+
 .u-margin-bottom-small {
   margin-bottom: 2rem !important;
 }
@@ -26,6 +38,22 @@
   margin-bottom: 4.8rem !important;
 }
 
+.u-margin-top-small {
+  margin-top: 2rem !important;
+}
+
+.u-margin-top-medium {
+  margin-top: 3.5rem !important;
+}
+
+.u-margin-top-big {
+  margin-top: 4.8rem !important;
+}
+
+.u-flex-gap-super-small {
+  gap: 0.75rem !important;
+}
+
 .u-flex-gap-small {
   gap: 2.5rem !important;
 }
@@ -36,4 +64,8 @@
 
 .u-flex-gap-big {
   gap: 4.8rem !important;
+}
+
+.flex-right-content {
+  justify-content: flex-end !important;
 }

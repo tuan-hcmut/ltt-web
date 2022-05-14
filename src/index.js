@@ -2,10 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { AuthProvider } from "./context/authProvider";
+import { GeneralProvider } from "./context/generalProvider";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AuthProvider>
+      <GeneralProvider>
+        <App />
+      </GeneralProvider>
+    </AuthProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -1,5 +1,6 @@
 .footer {
   position: relative;
+  color: $color-white;
   background-color: $color-footer-bg;
   &::before {
     position: absolute;
@@ -26,6 +27,14 @@
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
+    }
+
+    & .nav__list .nav__link {
+      color: #fff;
+      &:hover,
+      &:active {
+        color: $color-hover;
+      }
     }
 
     &__contact .heading-fourth,
@@ -87,5 +96,6 @@
   z-index: 1000;
   &:hover {
     background-color: $color-grey-dark;
+    color: $color-hover;
   }
 }

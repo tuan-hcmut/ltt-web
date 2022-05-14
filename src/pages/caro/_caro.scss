@@ -1,0 +1,303 @@
+.caro {
+  &-containner {
+    display: flex;
+    padding: 7rem 4rem;
+    margin: 5rem 0;
+    height: 74rem;
+    background-color: $color-white;
+    border-radius: 3px;
+    box-shadow: 0 2.5rem 8rem 2rem rgba(0, 0, 0, 0.07);
+    & h2 {
+      text-align: center;
+      background-image: linear-gradient(to right bottom, #3e3d72, #2568ef);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+  }
+  &-setting,
+  &-online {
+    display: flex;
+    flex-flow: column;
+  }
+
+  &-setting {
+    width: 55%;
+  }
+
+  &-online {
+    width: 45%;
+    background-color: $color-border-grey;
+    border-radius: 10px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    list-style: none;
+  }
+
+  &-join-room,
+  &-fighting-room {
+    & ul li {
+    }
+    &__content {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      & .form-group {
+        margin-bottom: 0;
+        & .form-input {
+          padding: 1rem 1.75rem;
+        }
+      }
+    }
+  }
+
+  &-create-room {
+    & .form-group {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.4rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      color: $color-grey-dark;
+      & input {
+        margin-right: 1rem;
+        // padding-top: 0.2rem;
+      }
+      & label {
+      }
+    }
+    & .form-label {
+      margin-bottom: 0;
+      margin-right: 0.75rem;
+    }
+  }
+
+  &-join-room,
+  &-create-room,
+  &-fighting-room {
+    height: 50%;
+    & ul {
+      display: flex;
+      flex-flow: column;
+      list-style: none;
+
+      & li {
+        display: flex;
+        justify-content: space-between;
+        border-radius: 3px;
+        background-image: linear-gradient(to right, #64a559, #1b785a);
+        border-bottom: 1px solid $color-grey-dark;
+      }
+    }
+  }
+}
+
+.weapon-x {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: red;
+}
+
+.weapon-o {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1f96e6;
+}
+
+.user-online {
+  height: 50%;
+
+  & ul {
+    display: flex;
+    flex-flow: column;
+    padding: 1rem 0;
+    & li {
+      display: flex;
+      position: relative;
+      align-items: center;
+      padding: 0.75rem 1.5rem;
+      border-radius: 3px;
+      gap: 1rem;
+      cursor: pointer;
+      & img {
+        height: 3.4rem;
+        width: 3.6rem;
+        border-radius: 50%;
+      }
+
+      &:hover,
+      &:active {
+        background-color: $color-grey-light;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: 50%;
+        border: 2px solid $color-white;
+        bottom: 8%;
+        left: 8%;
+        background-color: green;
+      }
+    }
+  }
+}
+
+.room-infor-wrapper {
+  display: flex;
+  gap: 2rem;
+  padding: 1.5rem 1rem;
+}
+
+.fighting-btn {
+  display: flex;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 1.5rem 2rem;
+  transition: all 0.2s;
+  &:hover,
+  &:active {
+    transform: translateY(-1px);
+  }
+}
+
+.num-player,
+.room-id,
+.num-deposit,
+.your-weapon {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.battle {
+  &-containner {
+    padding: 7rem 0rem;
+    &__infor {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  &-top__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.infor {
+  &-players {
+    display: flex;
+    flex-flow: column;
+    font-size: 1.6rem;
+    font-weight: 500;
+    width: 21%;
+    gap: 2rem;
+
+    & img {
+      height: 8rem;
+      width: 8rem;
+      border-radius: 55%;
+    }
+  }
+
+  &-host,
+  &-enemy {
+    display: flex;
+    flex-flow: column;
+    gap: 0.75rem;
+  }
+
+  &-host {
+    margin-bottom: 3rem;
+  }
+}
+
+.board-caro {
+  width: 54%;
+  background-color: #aac8db;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid $color-grey-dark;
+}
+
+.tile-caro {
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  width: 2.4rem;
+  height: 2.4rem;
+  cursor: pointer;
+  &:hover,
+  &:active {
+    background-color: #8eb5cf;
+  }
+}
+
+.chat {
+  &-wrapper {
+    width: 25%;
+    & > h2 {
+      text-align: center;
+      text-decoration: underline;
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  &-content {
+    display: flex;
+    flex-flow: column;
+    gap: 1.5rem;
+    height: 36.5rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    overflow-y: auto;
+    margin: 0 1.5rem;
+    border: 1px solid $color-grey-light;
+    background-color: $bg-color-grey;
+    border-radius: 10px 10px 0 0;
+
+    &::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    &::-webkit-scrollbar-track-piece:end {
+      /* Select the top half (or left half) or scrollbar track individually */
+    }
+
+    &__inner {
+      text-align: left;
+      text-overflow: ellipsis;
+      margin-left: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      & p {
+      }
+      & img {
+        height: 3.2rem;
+        width: 3.4rem;
+        border-radius: 50%;
+      }
+    }
+  }
+  &-input {
+    background-color: $bg-color-grey;
+    margin: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid $color-grey-light;
+    border-radius: 0 0 10px 10px;
+    & ion-icon {
+      font-size: 2.2rem;
+    }
+    & input {
+      border: inherit;
+    }
+  }
+}
